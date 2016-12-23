@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tcdrill",
+  "name": "Tinkers' Drills",
+  "description": "Adds a drill, the ultimate combination of a shovel, axe, and pickaxe.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tupster24"],
+  "credits": "Boni and mDiyo, for their awesome creation!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

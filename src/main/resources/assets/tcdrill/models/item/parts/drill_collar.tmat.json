@@ -1,0 +1,10 @@
+{
+  "parent": "builtin/generated",
+  "textures": {
+    "layer0": "tcdrill:items/drill/collar"
+  },
+  "offset": {
+    "x": -3,
+    "y": 3
+  }
+}

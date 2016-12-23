@@ -1,0 +1,9 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "tcdrill:items/drill/handle",
+    "layer1": "tcdrill:items/drill/head",
+    "layer2": "tcdrill:items/drill/collar",
+    "broken1": "tcdrill:items/drill/broken_head"
+  }
+}
