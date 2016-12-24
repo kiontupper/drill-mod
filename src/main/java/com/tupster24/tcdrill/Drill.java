@@ -1,6 +1,9 @@
 package com.tupster24.tcdrill;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import slimeknights.tconstruct.library.tinkering.Category;
 import slimeknights.tconstruct.library.tinkering.PartMaterialType;
 import slimeknights.tconstruct.library.tools.AoeToolCore;
@@ -9,6 +12,7 @@ import slimeknights.tconstruct.tools.tools.Hatchet;
 import slimeknights.tconstruct.tools.tools.Pickaxe;
 import slimeknights.tconstruct.tools.tools.Shovel;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 
 /**
@@ -16,8 +20,8 @@ import java.util.List;
  */
 public class Drill extends AoeToolCore {
 	public Drill() {
-		this(PartMaterialType.head(TcDrill.drillHead),
-			PartMaterialType.handle(TcDrill.drillHandle),
+		this(PartMaterialType.handle(TcDrill.drillHandle),
+			PartMaterialType.head(TcDrill.drillHead),
 			PartMaterialType.extra(TcDrill.drillCollar));
 	}
 
@@ -25,6 +29,12 @@ public class Drill extends AoeToolCore {
 		super(parts);
 		addCategory(Category.HARVEST);
 		this.setHarvestLevel("pickaxe", 0);
+	}
+
+	@Override
+	public void getSubItems(@Nonnull Item itemIn, CreativeTabs tab, List<ItemStack> subItems) {
+		addDefaultSubItems(subItems);
+		addInfiTool(subItems, "InfiDrill");
 	}
 
 	@Override
@@ -36,16 +46,18 @@ public class Drill extends AoeToolCore {
 
 	@Override
 	public float damagePotential() {
-		return 1f;
+		return 0.5f;
 	}
 
 	@Override
 	public double attackSpeed() {
-		return 1.2f;
+		return 2f;
 	}
-
 	@Override
 	protected ToolNBT buildTagData(List<slimeknights.tconstruct.library.materials.Material> materials) {
-		return buildDefaultTag(materials);
+		ToolNBT tag = buildDefaultTag(materials);
+		tag.modifiers += 2;
+		tag.durability *= 1.5;
+		return tag;
 	}
 }

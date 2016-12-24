@@ -24,7 +24,7 @@ import static slimeknights.tconstruct.tools.TinkerTools.pattern;
 @Mod(modid = TcDrill.MODID, version = TcDrill.VERSION, dependencies = "required-after:tconstruct@[1.10.2-2.6.1,)", acceptedMinecraftVersions = "[1.10.2, 1.11)")
 public class TcDrill {
 	public static final String MODID = "tcdrill";
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "1.1";
 
 	public static ToolPart drillHead;
 	public static ToolPart drillCollar;
@@ -74,9 +74,9 @@ public class TcDrill {
 	@SideOnly(Side.CLIENT)
 	public void init(FMLInitializationEvent event) {
 		ToolBuildGuiInfo info = new ToolBuildGuiInfo(drill);
-		info.addSlotPosition(33 - 18, 42 + 18);
-		info.addSlotPosition(33 + 18, 42 - 18);
-		info.addSlotPosition(33, 42);
+		info.addSlotPosition(32 + 18, 44 + 18);
+		info.addSlotPosition(32 - 18, 44 - 18);
+		info.addSlotPosition(32, 44);
 		TinkerRegistryClient.addToolBuilding(info);
 	}
 }

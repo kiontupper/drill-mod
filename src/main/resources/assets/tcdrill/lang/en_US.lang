@@ -2,4 +2,4 @@ item.tcdrill:drill_head.name=Drill Head
 item.tcdrill:drill_collar.name=Drill Collar
 item.tcdrill:drill_handle.name=Drill Handle
 item.tcdrill:drill.name=Drill
-item.tcdrill:drill.desc=The ultimate combination of a hatchet, shovel, and pickaxe.\n\nNow stop reading this and craft the thing!
+item.tcdrill:drill.desc=The ultimate combination of a hatchet, shovel, and pickaxe.\nModular electronics allow 2 extra modifiers to be added.
